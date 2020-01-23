@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Domestic Air Travel.</title>
+
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="db_styles.css">
+  <!-- For Carousel -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- DB to ADD Landing page link to flights once complete-->
+        <a class="navbar-brand" href="landingpage.html">Domestic Air Travel.</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="landingpage.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Comparisons.html">Comparison</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Plots
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="top_airports.html">US Airport Summary</a>
+                <a class="dropdown-item" href="delay_pie.html">US Airport Delay Pie</a>
+                <a class="dropdown-item" href="heatmap.html">US Delay Heatmap</a>
+                <a class="dropdown-item" href="delay_drivers.html">Delay Causes</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="landingpage.html">Go Home!</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Data.html">Data</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Doesn't Work Yet" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+  
+  <!-- Creates the Overall Grid -->
+  <div class="container-fluid">
+
+    <!-- Row 1 -->
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Project Overview</h1>
+      </div>
+    </div>
+
+    <!-- Row 2 -->
+    <div class="row">
+      <div class="col-md-8">
+        <p>Our project looked to analyze commercial airline flights in the US in order to summarize timeliness of arrivals, and if delayed, the primary reason(s) for this (i.e. weather, carrier, mechanical issues, etc.) including how this varies by both, airline and airport.</p>
+        <p>The analysis covered 18 of the top Airlines in the U.S. and 25 of the top U.S. Airports (by total flight volume) covering the period from September 2018-September 2019.</p>
+      </div>
+    
+    <!--Blank space for now-->
+      <div class="col-md-6">
+        <p></p>
+      </div>
+    </div>
+
+    <!--Header with visualizations-->
+    <h2 id="big-font">Visualizations</h2>
+
+    <!--Carousel of Visualizations-->
+  
+    <div class="bs-example">
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Carousel indicators -->
+          <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1"></li>
+              <li data-target="#myCarousel" data-slide-to="2"></li>
+          </ol>
+          <!-- Wrapper for carousel items -->
+          <div class="carousel-inner">
+            <!--Use first image below as ref to rest of carousel slides-->
+              <div class="carousel-item active">
+                <a href="top_airports.html">
+                  <img src="https://i.postimg.cc/4yq4vfWp/summary-airport-with-most-flights.png" class="d-inline-block w-50" alt="Airline Delays">
+                </a>
+                </div>
+             
+              <div class="carousel-item">
+                <a href="delay_pie.html">  
+                  <img src="/Users/danbishop/Desktop/Rutgers Data Science Bootcamp/Web Design Homework/Web-Design-ChallengeDB/Assets/TopAirport_Delay%_.png" class="d-inline-block w-50" alt="Delay Pie">
+                </a>
+                </div>
+              <div class="carousel-item">
+                <a href="heatmap.html">  
+                  <img src="/Users/danbishop/Desktop/Rutgers Data Science Bootcamp/Web Design Homework/Web-Design-ChallengeDB/Assets/Heatmap - Delays Cont US.png" class="d-inline-block w-50" alt="Delay Heatmap">
+                </a>
+                </div>
+              <div class="carousel-item">
+                <a href="delay_drivers.html">  
+                  <img src="/Users/danbishop/Desktop/Rutgers Data Science Bootcamp/Web Design Homework/Web-Design-ChallengeDB/Assets/Type_Delayed_Flights.png" class="d-inline-block w-50" alt="Delay Drivers">
+                </a>
+                </div> 
+          <!-- Carousel controls -->
+          <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+          </a>
+      </div>
+
+
+  </div>
+
+</body>
+
+</html>
